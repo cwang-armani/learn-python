@@ -1,0 +1,7 @@
+Django连接数据库并创建表的操作步骤：
+
+1.settings文件的DATABASES中配置数据库
+2.makemigrations  创建数据库变更文件
+3.migrate 将变更文件应用到数据库中
+4.创建app，并将app添加到settings中的INSTALLED_APPS 中
+5.在app的models文件中创建数据模型

@@ -1,0 +1,38 @@
+[uwsgi]
+socket=127.0.0.1:8000（使用nginx连接时，使用socket）
+http=127.0.0.1:8000（直接做web服务器，使用http）
+chdir=/home/python/Desktop/projects/test
+wsgi-file=test/wsgi.py
+processes=4
+threads=2
+master=True
+pidfile=uwsgi.pid
+daemonize=uswgi.log
+
+
+[uwsgi]
+socket=外网ip:端口（使用nginx连接时，使用socket）
+http=外网ip:端口（直接做web服务器，使用http）
+chdir=项目根目录
+wsgi-file=项目中wsgi.py文件的目录，相对于项目根目录
+processes=4
+threads=2
+master=True
+pidfile=uwsgi.pid
+daemonize=uswgi.log
+
+
+
+启动：uwsgi --ini uwsgi.ini
+停止：uwsgi --stop uwsgi.pid
+重启：uwsgi --reload uwsgi.pid
+使用http协议查看网站运行情况，运行正常，但是静态文件无法加载
+
+ps ajx|grep uwsgi
+查看uwsgi相关的进程
+
+
+
+
+
+
