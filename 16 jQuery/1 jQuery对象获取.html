@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <a name="211">alex222333</a>
+    <div id="i1">123</div>
+    <div id="i2">
+        <a class="c1">123333</a>
+        <a name="985">7987908</a>
+    </div>
+    <a>f1</a>
+    <p class="c2" id="i12">123123</p>
+    <input type="text" value="1000000000">
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        //单个找 查到的是对象，需要转换成dom
+        $('#i1,.c1');
+        $('.c1');
+        $('a');
+        //不同层级间加空格 同一层级不用
+        $('div a.c1')[0].innerText = '33333123123123';
+        $('div a')[1].innerText = '3331232333123123123';
+
+        $('#i2 a:eq(1)')[0].innerText = 312312;
+
+        $('[name = "985"]')[0].style = 'color:red';
+        $('[name = "211"]')[0].style.backgroundColor = 'green';
+
+        $('input[type="text"]')[0].value = 110;
+        $('input[type="text"]')[0].style.backgroundColor = 'gold'
+    </script>
+</body>
+</html>

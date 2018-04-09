@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒子模型</title>
+	<style type="text/css">
+		.box{
+			font-size: 30px;
+			width: 300px;
+			height: 200px;
+			background-color: gold;
+			
+			/*设置边框*/
+			border:2px solid black;
+			/*设置内容间距*/
+			padding: 28px 40px;
+			/*设置盒子与浏览器的距离*/
+			/*盒子水平居中*/
+			margin: 25px auto;
+		}
+		.news{
+			font-family: microsoft yahei;
+			font-size: 20px;
+			line-height: 20px;
+			width: 385px;
+
+			border-top:1px solid #f00;
+			border-bottom: 3px solid #666;
+			padding: 15px;
+		}
+		/*采用行高设置居中*/
+		.news2{
+			width: 400px;
+			height: 50px;
+			border-top:1px solid #f00;
+			border-bottom: 3px solid #666;			
+			font-size: 20px;
+			line-height: 50px;
+			text-indent: 15px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">外边距的设置方法和padding的设置方法相同，将上面设置项中的'padding'换成'margin'就是外边距设置方法。</div>
+	<div class="box">外边距的设置方法和padding的设置方法相同，将上面设置项中的'padding'换成'margin'就是外边距设置方法。</div>
+
+	<div class="news">新闻列表</div>
+	<br />
+	<div class="news2">新闻列表</div>	
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="i1">
+        <input id="i2" type="text" value="aaaa">
+    </div>
+
+    <div>
+        <select id="i3">
+            <option value="bj">北京</option>
+            <option value="sh">上海</option>
+            <option value="tj">天津</option>
+        </select>
+    </div>
+
+    <div>
+        <textarea id="i4"></textarea>
+    </div>
+    <div>
+        <input style="color: darkgray" id="i5" value="请输入关键字" onfocus="Focus()" onblur="Blur()">
+    </div>
+    <script>
+        function Focus() {
+            var a = document.getElementById('i5');
+            if (a.value === "请输入关键字"){
+                a.value = '';
+            }
+        }
+        function Blur() {
+        var b = document.getElementById('i5');
+        var val = b.value;
+            if (val.length === 0){
+                b.value = '请输入关键字';
+            }
+        }
+
+        //利用style改变字体样式
+        var obj = document.getElementById('i5');
+        obj.style.color = 'red';
+        obj.style.backgroundColor = 'black';
+        //添加及去除属性
+        obj.setAttribute('name','text');
+        //obj.removeAttribute('name');
+
+    </script>
+</body>
+</html>

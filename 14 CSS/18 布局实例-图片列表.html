@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片列表</title>
+	<style type="text/css">
+		body,ul,h3{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			list-style:none;
+		}
+		.clearfix:before,.clearfix:after{
+			/*清除margin-top塌陷*/
+			content: "";
+			display: table;
+
+		}
+		.clearfix:after{
+			/*清除浮动*/
+			clear: both;
+		}
+		.clearfix{
+			/*兼容ie*/
+			zoom:1;
+		}
+		.pic_list_con{
+			width: 958px;
+			border:1px solid black;
+			margin: 50px auto 0;
+			overflow: hidden;
+		}
+		.pic_list_con h3{
+			width: 918px;
+			border-bottom: 1px solid black;
+			margin: 0 auto;
+			height: 50px;
+		}
+		.pic_list_con h3 span{
+			padding: 0 20px;
+			display: inline-block;
+			/*height为了展示下划线*/
+			height: 50px;
+			border-bottom: 2px solid orange;
+			font:18px/50px 'microsoft yahei';
+		}
+		.pic_list_con ul{
+			width: 945px;
+			list-style: none;
+			margin: 20px 0 13px 20px;
+		}
+		.pic_list_con ul li{
+			width: 160px;
+			height: 68px;
+			float: left;
+			margin:0 29px 25px 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="pic_list_con">
+		<h3><span>图片列表</span></h3>
+		<ul class="clearfix">
+			<li><a href=""><img src="./goods.jpg" alt="商品图片"></a></li>
+			<li><a href=""><img src="./goods.jpg" alt="商品图片"></a></li>
+			<li><a href=""><img src="./goods.jpg" alt="商品图片"></a></li>
+			<li><a href=""><img src="./goods.jpg" alt="商品图片"></a></li>
+			<li><a href=""><img src="./goods.jpg" alt="商品图片"></a></li>
+			<li><a href=""><img src="./goods.jpg" alt="商品图片"></a></li>
+			<li><a href=""><img src="./goods.jpg" alt="商品图片"></a></li>
+			<li><a href=""><img src="./goods.jpg" alt="商品图片"></a></li>
+			<li><a href=""><img src="./goods.jpg" alt="商品图片"></a></li>
+			<li><a href=""><img src="./goods.jpg" alt="商品图片"></a></li>
+		</ul>
+	</div>
+</body>
+</html>

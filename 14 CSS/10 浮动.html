@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动</title>
+	<style type="text/css">
+		.con1,.con2{
+			width:300px;
+			border:1px solid black;
+			margin: 100px auto 0;
+			font-size: 0;
+		}
+		.con1 a{
+			width: 50px;
+			height: 50px;
+			font-size: 16px;
+			background-color: gold;
+			margin: 10px;
+			text-align: center;
+			text-decoration: none;
+			line-height: 50px;
+			
+			/*代码换行产生间距*/
+			display: inline-block;
+		}
+		.con2 {
+			/*父类添加overflow，清除浮动*/
+			overflow: hidden;
+		}
+		.con2 a{
+			width: 50px;
+			height: 50px;
+			font-size: 16px;
+			background-color: gold;
+			margin: 10px;
+			text-align: center;
+			text-decoration: none;
+			line-height: 50px;
+			/*父元素不限制高度，浮动元素无法撑开父元素，需清除浮动*/
+			float: left;
+		}
+
+		/*清除margin-top塌陷*/
+		.clearfix:after{
+			content:"";
+			display:table;
+			clear:both;
+		}
+		/*清除浮动*/
+		.clearfix:after{
+			content:"";
+			display:table;
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<div class="con1">
+		<a href="">1</a>
+		<a href="">2</a>
+		<a href="">3</a>
+		<a href="">4</a>
+		<a href="">5</a>
+		<a href="">6</a>
+		<a href="">7</a>
+		<a href="">8</a>
+		<a href="">4</a>
+		<a href="">5</a>
+		<a href="">6</a>
+		<a href="">7</a>
+	</div>
+
+	<div class="con2 clearfix">
+		<a href="">1</a>
+		<a href="">2</a>
+		<a href="">3</a>
+		<a href="">4</a>
+		<a href="">5</a>
+		<a href="">6</a>
+		<a href="">7</a>
+		<a href="">8</a>
+		<a href="">4</a>
+		<a href="">5</a>
+		<a href="">6</a>
+		<a href="">7</a>
+		
+<!-- 		<div style="clear:both"></div> -->
+<!-- 第二种清除浮动的方式 不推荐 -->
+	</div>
+</body>
+</html>
+
+
+<!-- 清除浮动
+
+1.父级上增加属性overflow：hidden
+2.在最后一个子元素的后面加一个空的div，给它样式属性 clear:both（不推荐）
+3.使用成熟的清浮动样式类，clearfix -->
+
+
+<!-- margin-top 塌陷
+
+在两个盒子嵌套时候，内部的盒子设置的margin-top会加到外边的盒子上，导致内部的盒子margin-top设置失败，解决方法如下：
+
+1、外部盒子设置一个边框
+2、外部盒子设置 overflow:hidden
+3、使用伪元素类： -->
+
+<!-- .clearfix:before{
+    content: '';
+    display:table;
+} -->

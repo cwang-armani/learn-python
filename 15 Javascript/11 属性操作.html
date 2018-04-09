@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="添加1" onclick="addElement1()" />
+    <input type="button" value="添加2" onclick="addElement2()" />
+    <div id="i1">
+        <p><input type="text" /></p>
+    </div>
+    <script>
+        function addElement1() {
+            //创建一个标签
+            var tag = '<p><input type="text" /></p>';
+            //添加标签
+            //beforebegin afterbegin beforeend afterend
+            document.getElementById("i1").insertAdjacentHTML('beforeEnd',tag)
+        }
+        function addElement2() {
+            //创建一个input标签
+            var tag = document.createElement('input');
+            tag.setAttribute('type','text');
+            //tag.setAttribute('style','border:1px solid red');
+            tag.style.border = '1px solid green';
+            document.getElementById("i1").appendChild(tag);
+
+            var p = document.createElement('p');
+            p.appendChild(tag);
+            document.getElementById('i1').appendChild(p)
+        }
+    </script>
+</body>
+</html>

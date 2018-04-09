@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .pg_head{
+            height: 48px;
+            background-color: #2459a2;
+            color: white;
+        }
+        .pg_content .menu{
+            position: absolute;
+            top: 48px;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            background-color: #dddddd;
+        }
+        .pg_content .content{
+            position: absolute;
+            top: 48px;
+            left: 200px;
+            right: 0;
+            bottom: 0;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="pg_head"></div>
+    <div class="pg_content">
+        <div class="menu fl">a</div>
+        <div class="content fr">
+            <p>111</p>
+        </div>
+    </div>
+    <div class="pg_footer"></div>
+</body>
+</html>

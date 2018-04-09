@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>example2</title>
+	<style type="text/css">
+		.con{
+			width: 960px;
+			height: 42px;
+			border:1px solid black;
+			text-align: left;
+			line-height: 42px;
+			background-color: #55a8ea;
+			margin: 0 auto;
+			position: relative;
+		}
+		.con div{
+			float: left;
+			width: 100px;
+			text-align: center;
+		}
+		.con a{
+			font-size: 14px;
+			font-family: 'microsoft yahei';
+			color: #fff;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.con div:hover{
+			background-color:#00619f;
+		}
+		.con .active{
+			/*指示当前页*/
+			background-color:#00619f;
+		}
+		.con .band_new{
+			background-image: url(./new.png);
+			width: 33px;
+			height: 20px;
+			position: absolute;
+			left: 433px;
+			top: -6px;
+		}
+		/*去除悬停图片时的样式*/
+		.con .band_new:hover{
+			background-color:#55a8ea;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="active"><a href="">首页</a></div>
+		<div><a href="">网站建设</a></div>
+		<div><a href="">程序开发</a></div>
+		<div><a href="">网络营销</a></div>
+		<div><a href="">企业IT</a></div>
+		<div><a href="">案例展示</a></div>
+		<div><a href="">联系我们</a></div>
+		<div class="band_new"></div>
+	</div>
+</body>
+</html>

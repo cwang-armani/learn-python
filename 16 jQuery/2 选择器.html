@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>选项</th>
+                <th>IP</th>
+                <th>端口</th>
+            </tr>
+        </thead>
+        <tbody id="i1">
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>192.168.1.1</td>
+                <td>27017</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>192.168.1.1</td>
+                <td>27017</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>192.168.1.1</td>
+                <td>27017</td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <input type="button" value="全选" onclick="checkAll()">
+    <input type="button" value="取消" onclick="cancelAll()">
+    <input type="button" value="反选" onclick="reverseAll()">
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        function checkAll() {
+            //$('#i1 :checkbox').prop('checked',true);
+            $(':checkbox').prop('checked',true);
+        }
+        function cancelAll() {
+            //prop方法是jquery中的
+            $(':checkbox').prop('checked',false);
+        }
+        function reverseAll() {
+            $(':checkbox').each(function (k){
+                //this 代指循环的每一个元素
+                //判断 进行反选
+                //Dom方法
+                /*if (this.checked === true){
+                    this.checked = false;
+                }else{
+                    this.checked = true
+                }*/
+                if ($(this).prop('checked')){
+                    $(this).prop('checked',false)
+                }else{
+                    $(this).prop('checked',true)
+                }
+                /*三元运算
+                var judge = $(this).prop('checked')?false:true;
+                $(this).prop('checked',judge)
+                */
+            })
+        }
+    </script>
+</body>
+</html>

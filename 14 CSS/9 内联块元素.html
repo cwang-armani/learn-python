@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内联块元素display转化</title>
+	<style type="text/css">
+		.con{
+			width: 500px;
+			height: 300px;
+			border:1px solid #333;
+			margin: 50px auto 0;
+			font-size: 0;
+			/*设置水平居中*/
+			text-align: center;
+			/*设置垂直居中*/
+			line-height: 50px;
+			/*干掉下划线*/
+		}
+		.con a{
+			background-color: gold;
+			font-size: 20px;
+			width: 150px;
+			height: 50px;
+			/*转化内联块元素 宽高可用*/
+			display: inline-block;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<a href="">标签</a>
+		<a href="">标签</a>
+		<a href="">标签</a>
+		<a href="">标签</a>
+		<a href="">标签</a>
+	</div>
+</body>
+</html>
+
+<!-- 子元素是内联元素，父元素可以用text-align属性设置子元素水平对齐方式，
+用line-height属性值设置垂直对齐方式 -->
+
+<!-- 将内联元素的父级设置font-size为0，内联元素自身再设置font-size -->

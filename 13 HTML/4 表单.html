@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+	<h3>用户注册</h3>
+	<!--action表单的提交地址-->
+	<form action="https://www.baidu.com/" method="post">
+		
+		<div>
+			<!--label后的for设置激活属性-->
+			<label for="username">用户名</label>
+			<input type="text" name="username" id="username">
+		</div>
+		<br />
+		
+		<div>
+			<label for="pwd">密码</label>
+			<input type="password" name="password" id="pwd">
+		</div>
+		<br />
+
+		<div>
+			<!--radion 单选框 name相同则为互斥关系-->
+			<label>性别</label>
+			<input type="radio" name="gender" id="male" value="0"><label for="male">男</label>
+			<input type="radio" name="gender" id="female" value="1"><label for="female">女</label>
+		</div>
+		<br />
+
+		<div>
+			<!--checkbox 多选框-->
+			<label>爱好</label>
+			<input type="checkbox" name="likes" value="games">游戏
+			<input type="checkbox" name="likes" value="sleep">睡觉
+			<input type="checkbox" name="likes" value="drink">喝酒
+			<input type="checkbox" name="likes" value="smook">抽烟
+		</div>
+		<br />
+
+		<div>
+			<label>籍贯</label>
+			<select name="city">
+				<option value="0">北京</option>
+				<option value="1">上海</option>
+				<option value="2">广州</option>
+				<option value="3">深圳</option>				
+			</select>
+		</div>
+		<br />
+
+		<div>
+			<label>上传图片</label>
+			<!--file 上传文件-->
+			<input type="file" name="">
+		</div>
+		<br />
+
+		<div>
+			<label>个人描述</label>
+			<textarea name="info"></textarea>
+		</div>
+		<br />
+		
+		<!--submit 提交按钮-->
+		<input type="submit" name="" value="提交">
+		<!--reset 重置按钮-->
+		<input type="reset" name="" value="重置">
+		<!--button 普通按钮-->
+		<input type="button" name="" value="按钮">
+		<br />
+		
+		<!-- 用图片作为提交按钮 不常用 -->
+		<input type="image" name="" src="./icon.jpg">
+		<!--hidden 存储值,一并提交，其他功能使用-->
+		<input type="hidden" name="hid" value="10000">
+	</form>
+	
+</body>
+</html>
+
+?username=wangnim&password=3123123123&gender=0&likes=sleep&likes=drink&city=0&info=3123123123123

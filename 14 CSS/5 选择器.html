@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 内嵌式样式 一般首页用 读取速度快-->
+	<style type="text/css">
+		div{
+			color:red; 
+			font-size:18px;
+			font-family:microsoft Yahei; 
+			line-height:30px;
+			text-indent: 36px;
+			text-align: left;
+		}
+		span{
+			font-weight:bold;
+			font-style: italic;
+		}
+		h1{
+			font-style: normal;
+			font-family: microsoft yahei;
+			color: green;
+			font-weight: normal;
+		}
+		.size{
+			font-size: 20px;
+			text-indent: 40px;
+		}
+		/*后侧样式会覆盖前侧样式*/
+		.box{
+			color: gold;
+		}
+		#green{
+			color: green;
+		}
+		/*层级选择器*/
+		.paragraph em
+		{
+			color: pink;
+			font-weight: bold;
+		}
+		.list li{
+			text-decoration: none;
+			list-style: none;
+			font-size: 30px;
+		}
+		.list a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>欢迎来到我的网站</h1>	
+	<div class="paragraph">
+		大家都是<span>推荐分享</span>而已，不用太大火气的。这年头，<br />
+		靠谱的网站都能被搜索出来了，网站什么的就不用故<br />
+		意去收藏了，顶多在浏览器按关键词找历史就行。所<br />
+		<em>以网站什么的就</em>不说了。
+	</div>
+	<div class="box size">
+		大家都是<span>推荐分享</span>而已，不用太大火气的。这年头，<br />
+		靠谱的网站都能被搜索出来了，网站什么的就不用故<br />
+		意去收藏了，顶多在浏览器按关键词找历史就行。所<br />
+		<em>以网站什么</em>的就不说了。
+	</div>
+	<!-- id选择器权重大于类选择器 -->
+	<div class="box" id="green">
+		大家都是<span>推荐分享</span>而已，不用太大火气的。这年头，<br />
+		靠谱的网站都能被搜索出来了，网站什么的就不用故<br />
+		意去收藏了，顶多在浏览器按关键词找历史就行。所<br />
+		以网站什么的就不说了。
+	</div>
+
+	<ul class="list">
+		<li><a href="">新闻标题</a></li>
+		<li><a href="">新闻标题</a></li>
+		<li><a href="">新闻标题</a></li>
+		<li><a href="">新闻标题</a></li>
+		<li><a href="">新闻标题</a></li>
+	</ul>
+	<a href="https://www.baidu.com/" title="百度一下，你就知道" target="_blank">百度</a>
+</body>
+
+</html>

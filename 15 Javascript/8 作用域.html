@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function ChangeState(nid) {
+            var current_header = document.getElementById(nid);
+            var item_list = current_header.parentElement.parentElement.children;
+            for (var i=0;i<item_list.length;i++){
+                item_list[i].children[1].classList.add('hide');
+            }
+            current_header.nextElementSibling.classList.remove('hide')
+        }
+        {#作用域1#}
+        xo = 'ales';
+        function func() {
+            xo ='eric';
+            function inner() {
+                console.log(xo);
+            }
+            return inner;
+        }
+        ret = func();
+        ret();
+        {#作用域2：#}
+        function func2() {
+            var xo ='eric';
+            function inner() {
+                console.log(xo);
+            }
+            var xo = 'tony';
+            return inner;
+        }
+        ret = func2();
+        ret();
+    </script>
+</body>
+</html>

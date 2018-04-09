@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="i1" type="text" placeholder="请输入内容">
+    <input id="i2" type="button" value="提交">
+    <input id="i3" type="button" value="删除">
+    <ul id="u1">
+        <li>1</li>
+        <li>2</li>
+    </ul>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $('#i2').click(function () {
+            var temp = $('#i1').val();
+            content = "<li>" + temp + "</li>";
+            $('#u1').prepend(content)
+            //添加到前面
+            //$('#u1').prepend(content)
+            // after() before()在外部的上下
+        });
+
+        $('#i3').click(function () {
+            var index = $('#i1').val();
+            $('#u1 li').eq(index).remove()
+
+        });
+        //代码按顺序执行
+        //绑定时间的方式 可以对新添加的对象绑定
+        $('ul').delegate('li','click',function () {
+            var v = $(this).text()
+            alert(v)
+        })
+    </script>
+</body>
+</html>

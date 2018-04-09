@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格结构</title>
+	<style type="text/css">
+		.goods_list{
+			border: 1px solid #333;
+			border-collapse: collapse;
+			width: 300px;
+			height: 120px;			
+		}
+		.goods_list th,td{
+			border: 1px solid black;
+			text-align: center;
+			font-family: microsoft yahei;
+		}
+		.goods_list th{
+			background-color: #3366cc;
+			color: #ffffff;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>产品列表</h3>
+	<table class="goods_list">
+		<!-- tr 表示列-->
+		<tr>
+			<!-- th 表示表头-->
+			<th>序号</th>
+			<th>产品名称</th>
+			<th>产品价格</th>
+			<th>产品数量</th>
+		</tr>
+		<!-- center left right-->
+		<tr>
+			<!-- td 表示表格中的列-->
+			<td>1</td>
+			<td>苹果</td>
+			<td>5.00￥</td>
+			<td>100kg</td>
+		</tr>
+		<!-- middle top bottom -->
+		<tr>
+			<td>2</td>
+			<td>橘子</td>
+			<td>4.00￥</td>
+			<td>200kg</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+<!-- 标签建议全部小写性-->
+<!-- 标签闭合，成对标签成对出现，单个 以"/"结尾-->

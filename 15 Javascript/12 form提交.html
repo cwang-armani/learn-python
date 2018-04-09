@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{#  任何标签都可以通过dom提交表单#}
+    <form action="http://baidu.com" id="i1">
+        <input type="text" />
+        <input type="submit" value="提交"/>
+    </form>
+    <div style="color: red" onclick="submit_form()">我也能提交</div>
+
+    <script>
+        function submit_form() {
+            var v = confirm('是否进行跳转？');
+            console.log(v);
+            if (v === true){
+                document.getElementById('i1').submit();
+            }
+            else{
+                console.log('取消')
+            }
+        }
+    </script>
+</body>
+</html>

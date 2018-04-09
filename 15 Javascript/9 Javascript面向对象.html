@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        {#定义类#}
+        function Func (name) {
+            this.name = name;
+        }
+        {#原型 类似于字典#}
+        Func.prototype = {
+            'say_name':function ( ) {
+                console.log(this.name)
+            }
+        };
+        var obj = new Foo('alex');
+        obj.say_name()
+    </script>
+</body>
+</html>

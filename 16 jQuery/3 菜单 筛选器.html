@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .header{
+            background-color: gold;
+            color: white;
+        }
+        .content{
+            min-height: 50px;
+
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 400px; width: 200px; border: 1px solid green">
+        <div class="item">
+            <div class="header">header1</div>
+            <div class="content hide">content1</div>
+        </div>
+        <div class="item">
+            <div class="header">header2</div>
+            <div class="content hide">content2</div>
+        </div>
+        <div class="item">
+            <div class="header">header3</div>
+            <div class="content hide">content3</div>
+        </div>
+    </div>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $('.header').click(function () {
+            // 当前点击的标签 需要获取下一个标签
+            // 筛选器next prev parent children siblings
+            // find 从子子孙孙类查找
+            $(this).next().removeClass('hide');
+            $(this).parent().siblings().find('.content').addClass('hide');
+            //JQuery支持链式编程
+            //$(this).next().removeClass('hide').parent().siblings().find('.content').addClass('hide')
+        })
+    </script>
+</body>
+</html>

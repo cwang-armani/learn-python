@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定位</title>
+	<style type="text/css">
+		.con{
+			width:400px;
+			height: 400px;
+			border:1px solid #000;
+			margin: 100px auto 0;
+			/*绝对定位 position: relative;*/
+		}
+		.con div{
+			width: 200px;
+			height: 100px;
+			margin: 20px;
+			background-color: gold;
+			line-height: 100px;
+			font-size: 40px;
+			text-align: center;
+		}
+		body .box1{
+			/*相对自身位置进行偏移*/
+			position: relative;
+			left: 50px;
+			top: 25px;
+			background-color: green;
+		}
+		body .box2{
+			/*针对父级的绝对位置，最高级为body，不在占有原位置*/
+			position: absolute;
+			left: -20px;
+			background-color: pink;
+		}
+		body .box3{
+			/*相对浏览器窗口进行定位*/
+			position: fixed;
+			right: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+	</div>
+</body>
+</html>
+
+<!-- 绝对定位和固定定位的块元素和行内元素会自动转化为行内块元素 -->
+
+<!-- 典型定位布局 
+1、固定在顶部的菜单
+2、水平垂直居中的弹框
+3、固定的侧边的工具栏
+4、固定在底部的按钮 -->
+
+z-index设置层级

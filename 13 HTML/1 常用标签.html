@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>结构布局</title>
+	</head>
+	
+	<body>
+		<!--标题分级-->
+		<h1 id="title-01">常用标签</h1>
+		<h2>welcome!</h2>
+		<h3>hi!</h3>
+		<h4>欢迎访问我的网页!</h4>
+		<h5>welcome!</h5>
+		<h6>hi!</h6>
+
+		<!--段落标签,采用br强制换行-->
+		<p>中关村在线新闻资讯2月19日消息：<br />谷歌Pixel8.1，但也带来了一些问题</p>
+		<p>中关村在线新闻资讯2月19日消息：<br />谷歌Pixel8.1，但也带来了一些问题</p>
+
+		<!--div表示一整块内容,span特定一小块，都是无意义，用于局部增加样式-->
+		<div>中关村在线新闻资讯<span>2月19日消息:</span><br />谷歌Pixel8.1，但也带来了一些问题</div>
+		<div>中关村在线新闻资讯2月19日消息：<br />谷歌Pixel8.1，但也带来了一些问题</div>
+
+		<!--em标签 表示语气中的强调词-->
+		<!--i标签 表示专业词汇-->
+		<!--b标签 表示文档中的关键字或者产品名-->
+		<!--strong 表示非常重要的内容-->
+		<div>中关村<em>新闻资讯</em>新闻资讯2月19日：<i>谷歌Pixel8.1</i>但也带来了一些问题</div>
+		<div>中关村<b>新闻资讯</b>新闻资讯2月19日：<strong>谷歌Pixel8.1</strong>但也带来了一些问题</div>
+
+		<!--图像及路径-->
+		<!--绝对路径：磁盘，和相对路径：本文件夹-->		
+		<img src="./bg.jpg" alt="icon" id="title-02" /><br />
+		<img src="./location_bg.jpg" alt="风景" /><br />
+		<img src="./picstyle07.jpg" alt="人物" /><br />
+
+		<!--html文件链接-->	
+		<a href="index.html"></a>
+
+		<!--点击logo后跳转，嵌套-->
+		<a href="https://www.baidu.com/" title="跳转至百度">
+			<img src="5f8dcf06d74b796a51269303a0d2e07b_bd_logo1.png" alt="百度logo">
+		</a>
+		<br />
+		
+		<!--title时鼠标移入时的提示-->	
+		<a href="https://www.baidu.com/" title="跳转至百度" target="_self">百度</a>
+
+		<!--连接至页面顶部-->
+		<a href="#">回到顶部</a>
+
+		<!--锚点制作，页面内部跳转-->
+		<a href="#title-01">标题1</a>
+		<a href="#title-02">标题2</a>
+
+		<a href="https://www.baidu.com/" title="跳转至百度" target="_blank">百度(新建标签)</a>
+		<br />
+
+		<!--都是有语义的，而div没有语义，也能做出来-->		
+		<h3>有序列表用的很少</h3>
+		<ol>
+			<li>学习html</li>
+			<li>学习css</li>
+			<li>学习JavaScript</li>
+		</ol>
+		<br />
+
+		<h3>无序列表用的很多</h3>
+		<ul>
+			<li><a href="http://news.163.com/18/0218/23/DAVDHER00001875P.html" target="_blank">福建莆田农村婚恋:结婚极少超25岁</a></li>
+			<li><a href="http://news.163.com/18/0219/00/DAVHL9VU000187VE.html" target="_blank">男子除夕醉驾车内睡着被查</a></li>
+		</ul>
+
+		<h3>定义列表</h3>
+		<dl>
+			<dt>html</dt>
+			<dd>负责页面结构</dd>
+			<dt>CSS</dt>
+			<dd>负责页面表现</dd>
+			<dt>JavaScript</dt>
+			<dd>负责页面行为</dd>
+		</dl>
+
+
+	</body>
+</html>
+
+<!-- 标签建议全部小写性-->
+<!-- 标签闭合，成对标签成对出现，单个 以"/"结尾-->

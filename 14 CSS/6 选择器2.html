@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>组选择器</title>
+	<style type="text/css">
+		.box1,.box2,.box3{
+			font-size: 20px;
+			text-indent: 40px;
+		}
+		.box1{color: red;}
+		.box2{color: gold;}
+		.box3{color: pink;}
+		
+		/*在前插入文字 鼠标无法选中*/
+		.box1:before{
+			content:"在前面的文字 ";
+			color:blue;
+		}
+			.box2:after{
+			content:" 在后面的文字";
+			color:blue;
+		}
+
+		.list a{
+			color:black;
+			text-decoration: none;
+			line-height:20px;
+		}
+		/*hover 鼠标悬浮时的状态*/
+		.list a:hover{
+			color: gold;
+			text-decoration: underline;
+		}
+		.body div:hover{
+			color: green;
+		}
+	</style>
+</head>
+<body class="body">
+	<div class="box1">这是一个组选择器</div>
+	<div class="box2">这是一个组选择器</div>
+	<div class="box3">这是一个组选择器</div>
+
+	<ul class="list">
+		<li><a href="">网易新闻</a></li>
+		<li><a href="">网易新闻</a></li>
+		<li><a href="">网易新闻</a></li>
+		<li><a href="">网易新闻</a></li>
+	</ul>
+</body>
+</html>

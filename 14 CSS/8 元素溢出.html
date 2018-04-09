@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>元素溢出</title>
+	<style type="text/css">
+		.con{
+			width: 500px;
+			height: 300px;
+			border:1px solid #333;
+			margin: 50px auto;
+			overflow: auto;
+		}
+		.box{
+			width: 400px;
+			height: 600px;
+			background-color: gold;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="box"></div>
+	</div>
+</body>
+</html>
+
+<!-- margin-top 塌陷
+
+在两个盒子嵌套时候，内部的盒子设置的margin-top会加到外边的盒子上，导致内部的盒子margin-top设置失败，解决方法如下：
+
+1、外部盒子设置一个边框
+2、外部盒子设置 overflow:hidden
+3、使用伪元素类： -->

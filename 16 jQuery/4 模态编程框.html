@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .modal{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width:300px;
+            height: 200px;
+            margin-left: -150px;
+            margin-top: -100px;
+            background-color: #eeeeee;
+            z-index: 100;
+        }
+        .shade{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            opacity: 0.6;
+            background-color: black;
+            z-index: 20;
+
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <a onclick="addElem()">添加</a>
+    <div>
+        <div class="modal hide">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="button" value="取消" onclick="cancelModel()">
+        </div>
+    </div>
+    <div class="shade hide"></div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>选项</th>
+                <th>IP</th>
+                <th>端口</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="i1">
+            <tr>
+                <td>192.168.1.1</td>
+                <td>27017</td>
+                <td>
+                    <a class="edit">编辑</a>|<a>删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td>192.168.2.2</td>
+                <td>8000</td>
+                <td>
+                    <a class="edit">编辑</a>|<a>删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td>192.168.3.3</td>
+                <td>3306</td>
+                <td>
+                    <a class="edit">编辑</a>|<a>删除</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        function addElem() {
+            $('.modal,.shade').removeClass('hide');
+        }
+        function cancelModel() {
+            $('.modal,.shade').addClass('hide')
+        }
+    </script>
+</body>
+</html>

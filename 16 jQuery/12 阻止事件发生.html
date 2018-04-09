@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .error{
+            color: #ff1a2b;
+        }
+    </style>
+</head>
+<body>
+    <form id="i1" action="http://baidu.com" method="post">
+        <div><input name="n1" type="text" placeholder="输入"></div>
+        <div><input name="n2" type="text" placeholder="输入"></div>
+        <div><input name="n3" type="text" placeholder="输入"></div>
+        <div><input name="n4" type="text" placeholder="输入"></div>
+        <div><input name="n5" type="text" placeholder="输入"></div>
+
+        <input type="submit" value="提交">
+    </form>
+
+    <img src="...">
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(':submit').click(function () {
+            //页面加载完成后自动执行
+            $(function () {
+                //放入事件
+            });
+            // 移除之前的样式
+            $('.error').remove();
+            var flag = true;
+            // 查找到子子孙孙
+            $('#i1').find('input[type="text"]','input[type="password"]').each(function () {
+                var content = $(this).val();
+                if (content.length<=0){
+                    flag = false;
+                    // 创建span标签 添加至尾部
+                    var tag = document.createElement('span');
+                    $(tag).text('必填');
+                    $(tag).addClass('error');
+                    // Dom格式写法
+                    //tag.innerHTML = '必填';
+                    //tag.className = 'error';
+                    $(this).after(tag);
+                }
+            });
+            return flag;
+        })
+    </script>
+</body>
+</html>
